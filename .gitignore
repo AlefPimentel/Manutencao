@@ -1,20 +1,18 @@
 ### IntelliJ IDEA ###
+.idea/
 out/
-!**/src/main/**/out/
-!**/src/test/**/out/
+*.iml
 .kotlin
 
 ### Eclipse ###
-.apt_generated
 .classpath
 .factorypath
 .project
-.settings
+.settings/
+.apt_generated
 .springBeans
 .sts4-cache
 bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
 
 ### NetBeans ###
 /nbproject/private/
@@ -26,5 +24,16 @@ bin/
 ### VS Code ###
 .vscode/
 
-### Mac OS ###
+### Maven ###
+/target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+### OS ###
 .DS_Store
+
