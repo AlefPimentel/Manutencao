@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="300.0" prefWidth="600.0" styleClass="root" stylesheets="@../ui/css/menu_estoque.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.CadastroParticaoController">
+
+    <top>
+        <HBox alignment="CENTER_LEFT" styleClass="top-bar">
+            <padding>
+                <Insets bottom="15" left="20" right="20" top="15" />
+            </padding>
+            <children>
+                <Label styleClass="logo-label" text="NOVA PARTIÇÃO" />
+            </children>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER_LEFT" spacing="20.0" styleClass="painel-central">
+            <padding>
+                <Insets bottom="30" left="40" right="40" top="30" />
+            </padding>
+            <children>
+                <Label text="Preencha os dados abaixo para criar uma nova categoria:" textFill="#6b7280" wrapText="true" />
+
+                <GridPane hgap="15" vgap="15">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="LEFT" hgrow="NEVER" minWidth="80.0" />
+                        <ColumnConstraints hgrow="ALWAYS" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints vgrow="NEVER" />
+                    </rowConstraints>
+                    <children>
+                        <Label styleClass="label-form" text="Nome:" GridPane.columnIndex="0" />
+                        <TextField fx:id="txtNomeParticao" promptText="Ex: Prateleira A, Gaveta 3, Eletrônicos..." style="-fx-font-size: 14px;" GridPane.columnIndex="1" />
+                    </children>
+                </GridPane>
+            </children>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" spacing="15.0" styleClass="rodape">
+            <padding>
+                <Insets bottom="15" left="20" right="20" top="15" />
+            </padding>
+            <children>
+                <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#handleCancelar" styleClass="botao-cancelar" text="✖ Cancelar" />
+                <Button fx:id="btnSalvar" defaultButton="true" mnemonicParsing="false" onAction="#handleSalvar" styleClass="botao-salvar" text="✔ Salvar Partição" />
+            </children>
+        </HBox>
+    </bottom>
+
+</BorderPane>

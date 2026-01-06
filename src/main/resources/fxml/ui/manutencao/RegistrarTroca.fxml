@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="450.0" prefWidth="450.0" styleClass="root" stylesheets="@../css/menu_estoque.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.manutencao.RegistrarTrocaController">
+
+    <top>
+        <HBox alignment="CENTER_LEFT" styleClass="top-bar">
+            <padding>
+                <Insets bottom="10" left="15" right="15" top="10" />
+            </padding>
+            <children>
+                <Label fx:id="lblTitulo" styleClass="logo-label" text="REGISTRAR MANUTENÇÃO" />
+            </children>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox spacing="15.0" styleClass="painel-central">
+            <padding>
+                <Insets bottom="30" left="40" right="40" top="30" />
+            </padding>
+            <children>
+
+                <VBox style="-fx-background-color: #E0F2FE; -fx-padding: 10; -fx-background-radius: 5; -fx-border-color: #BAE6FD; -fx-border-radius: 5;">
+                    <children>
+                        <Label style="-fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #0078D4;" text="EQUIPAMENTO:" />
+                        <Label fx:id="lblNomeBritador" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #374151;" text="-" />
+                        <Label fx:id="lblTipoManutencao" style="-fx-text-fill: #555; -fx-font-style: italic;" text="Tipo: -" />
+                    </children>
+                </VBox>
+
+                <Separator />
+
+                <VBox spacing="5">
+                    <Label styleClass="label-form" text="Data da Troca:" />
+                    <DatePicker fx:id="dpData" maxWidth="Infinity" />
+                </VBox>
+
+                <VBox spacing="5">
+                    <Label styleClass="label-form" text="Horímetro:" />
+                    <TextField fx:id="txtHorimetro" promptText="Ex: 12500" />
+                </VBox>
+
+                <VBox spacing="5">
+                    <Label styleClass="label-form" text="Responsável:" />
+                    <TextField fx:id="txtResponsavel" promptText="Quem realizou a troca?" />
+                </VBox>
+
+                <VBox spacing="5">
+                    <Label styleClass="label-form" text="Especificação / Código:" />
+                    <TextField fx:id="txtEspecificacao" promptText="Ex: Correia B-158 ou ISO 320" />
+                </VBox>
+
+                <VBox fx:id="boxOleo" spacing="5" visible="false" managed="false">
+                    <CheckBox fx:id="chkCfsf" text="Houve troca de filtro? (CF/SF)" style="-fx-font-size: 14px; -fx-text-fill: #374151;" />
+                </VBox>
+
+            </children>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" spacing="15.0" styleClass="rodape">
+            <padding>
+                <Insets bottom="15" left="20" right="20" top="15" />
+            </padding>
+            <children>
+                <Button mnemonicParsing="false" onAction="#handleCancelar" styleClass="botao-cancelar" text="Cancelar" />
+                <Button defaultButton="true" mnemonicParsing="false" onAction="#handleSalvar" styleClass="botao-salvar" text="✔ Confirmar Registro" />
+            </children>
+        </HBox>
+    </bottom>
+
+</BorderPane>

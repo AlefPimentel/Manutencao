@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="openjfx-21.0.9-javadoc">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Downloads/openjfx-21.0.9_windows-x64_bin-sdk (1)/openjfx-21.0.9-javadoc.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

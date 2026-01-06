@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" spacing="20.0" style="-fx-background-color: white; -fx-padding: 30;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.manutencao.EditarBritadorController">
+
+    <Label fx:id="lblTitulo" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #1E293B;" text="Editar Configurações" />
+
+    <VBox spacing="15.0">
+        <Label style="-fx-text-fill: #64748B; -fx-font-size: 14px;" text="Defina as especificações técnicas e o intervalo de troca (horas) para os alertas." wrapText="true" />
+
+        <Separator />
+
+        <GridPane hgap="15" vgap="15">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" minWidth="120" /> <ColumnConstraints hgrow="ALWAYS" minWidth="200" />    <ColumnConstraints hgrow="NEVER" minWidth="100" />     </columnConstraints>
+            <rowConstraints>
+                <RowConstraints /> <RowConstraints /> <RowConstraints /> <RowConstraints /> <RowConstraints />
+            </rowConstraints>
+
+            <Label style="-fx-font-size: 11px; -fx-font-weight: bold; -fx-text-fill: #94A3B8;" text="COMPONENTE" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <Label style="-fx-font-size: 11px; -fx-font-weight: bold; -fx-text-fill: #94A3B8;" text="ESPECIFICAÇÃO TÉCNICA" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Label style="-fx-font-size: 11px; -fx-font-weight: bold; -fx-text-fill: #94A3B8;" text="VIDA ÚTIL (H)" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+
+            <Label style="-fx-font-weight: bold; -fx-text-fill: #374151;" text="Revestimento:" GridPane.rowIndex="1" />
+            <TextField fx:id="txtSpecRev" promptText="Ex: Manganês Padrão" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtVidaRev" alignment="CENTER" promptText="Ex: 2000" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+
+            <Label style="-fx-font-weight: bold; -fx-text-fill: #374151;" text="Correia:" GridPane.rowIndex="2" />
+            <TextField fx:id="txtSpecCor" promptText="Ex: Correia V" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtVidaCor" alignment="CENTER" promptText="Ex: 5000" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+
+            <Label style="-fx-font-weight: bold; -fx-text-fill: #374151;" text="Óleo Hidráulico:" GridPane.rowIndex="3" />
+            <TextField fx:id="txtSpecHidr" promptText="Ex: ISO 68" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="txtVidaHidr" alignment="CENTER" promptText="Ex: 1000" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+
+            <Label style="-fx-font-weight: bold; -fx-text-fill: #374151;" text="Óleo Lubrificação:" GridPane.rowIndex="4" />
+            <TextField fx:id="txtSpecLub" promptText="Ex: ISO 220" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="txtVidaLub" alignment="CENTER" promptText="Ex: 500" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+
+        </GridPane>
+    </VBox>
+
+    <HBox alignment="CENTER_RIGHT" spacing="15.0" style="-fx-padding: 20 0 0 0;">
+        <Button onAction="#handleCancelar" style="-fx-background-color: transparent; -fx-text-fill: #64748B; -fx-cursor: hand;" text="Cancelar" />
+        <Button defaultButton="true" onAction="#handleSalvar" style="-fx-background-color: #3B82F6; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand; -fx-background-radius: 4; -fx-padding: 8 20;" text="Salvar Alterações" />
+    </HBox>
+
+</VBox>

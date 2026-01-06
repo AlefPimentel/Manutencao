@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+        <?import javafx.scene.control.Button?>
+        <?import javafx.scene.control.Label?>
+        <?import javafx.scene.layout.BorderPane?>
+        <?import javafx.scene.layout.HBox?>
+        <?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:controller="app.controller.TelaInicialController"
+            prefHeight="420.0" prefWidth="520.0"
+            styleClass="root"
+            stylesheets="@css/menu.css"
+            xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+
+<top>
+    <HBox styleClass="top-bar">
+        <children>
+            <Label text="☰  Grupo BASE" styleClass="logo-label" />
+        </children>
+    </HBox>
+</top>
+
+<center>
+    <VBox styleClass="center-box">
+        <children>
+            <Label text="BEM-VINDO" styleClass="label-bemvindo" />
+
+            <Button fx:id="btnManutencao"
+                    text="🛠  MANUTENÇÃO"
+                    styleClass="botao-menu"
+                    onAction="#handleManutencao" />
+
+            <Button fx:id="btnEstoque"
+                    text="📦  ESTOQUE"
+                    styleClass="botao-menu"
+                    onAction="#handleEstoque" />
+
+            <Label text="Grupo BASE © 2025" styleClass="rodape-label" />
+        </children>
+    </VBox>
+</center>
+
+</BorderPane>

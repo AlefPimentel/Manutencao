@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="350.0" prefWidth="400.0" styleClass="root" stylesheets="@../ui/css/menu_estoque.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.EntradaItemController">
+
+    <top>
+        <HBox alignment="CENTER_LEFT" styleClass="top-bar">
+            <padding> <Insets bottom="10" left="15" right="15" top="10" /> </padding>
+            <children>
+                <Label styleClass="logo-label" text="REGISTRAR ENTRADA" />
+            </children>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox spacing="15.0" styleClass="painel-central">
+            <padding> <Insets bottom="20" left="30" right="30" top="20" /> </padding>
+            <children>
+                <VBox style="-fx-background-color: #E0F2FE; -fx-padding: 10; -fx-background-radius: 5;">
+                    <children>
+                        <Label style="-fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #0078D4;" text="ITEM:" />
+                        <Label fx:id="lblNomeItem" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="..." />
+                        <Label fx:id="lblEstoqueAtual" style="-fx-text-fill: #555;" text="Estoque Atual: 0" />
+                    </children>
+                </VBox>
+
+                <Label styleClass="label-form" text="Quantidade recebida (+):" />
+                <TextField fx:id="txtQuantidade" promptText="Ex: 10" style="-fx-font-size: 14px;" />
+
+                <Label styleClass="label-form" text="Responsável / Entregador:" />
+                <TextField fx:id="txtResponsavel" promptText="Quem entregou ou recebeu?" />
+            </children>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" spacing="10.0" styleClass="rodape">
+            <padding> <Insets bottom="15" left="20" right="20" top="15" /> </padding>
+            <children>
+                <Button mnemonicParsing="false" onAction="#handleCancelar" styleClass="botao-cancelar" text="Cancelar" />
+                <Button defaultButton="true" mnemonicParsing="false" onAction="#handleConfirmar" styleClass="botao-salvar" text="✔ Confirmar Entrada" />
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>
